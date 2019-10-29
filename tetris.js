@@ -214,7 +214,7 @@ let speedUp = 0;
 let lastTime = 0;
 function update(time = 0) {
   speedUp = player.score;
-  const deltaTime = time - lastTime + (speedUp / 4);
+  const deltaTime = time - lastTime + (speedUp / 16);
   lastTime =time;
   dropCounter += deltaTime;
   if (dropCounter > dropInterval){
