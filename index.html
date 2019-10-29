@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The AdCat</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="catStyle.css">
+        <link rel="stylesheet" href="button.css">
+
+        <link rel="shortcut icon" type="image/x-icon" href="adCatLogo.ico" />
+
+        <script data-ad-client="ca-pub-1459383272918437" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 22px;
+                background-color: #F2E394;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="title">
+            <header>
+                <div id="header">
+                    <p><u>the adcat</u></p>
+                </div>
+            </header>
+        </div>
+        <div class="adCat">
+            <table id="catBody" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <span id="catEars" cellspacing="0" cellpadding="0">    ^    ^</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="catColor">
+                        (´・ω・｀)<br>
+                        <div id="advertisement" style="width: 197px; height: 197px; background-color: beige;">
+                            <button id="button" onclick="feedCat()">feed adcat</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style ="background-color: #F2E394;">
+                        <span style="float: left;">U      U</span>
+                        <span style="float: right">U      U</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+        <footer>
+            <div id="footer">
+                <p class="info">created by: donny</p>
+                <a href="about.html"><p class="info">about</p></a>
+                <a href="catmojis.html"><p class="info">catmojis</p></a>
+                <a href="tetris.html"><p class="info">tetris</p></a>
+            </div>
+        </footer>
+        </div>
+
+    </body>
+
+    <script>
+        function feedCat() {
+            var currentWidth = document.getElementById('advertisement').style.width;
+            currentWidth = currentWidth.replace('px','');
+
+            var currentHeight = document.getElementById('advertisement').style.height;
+            currentHeight = currentHeight.replace('px','');
+  
+            document.getElementById('advertisement').style.width = (parseInt(currentWidth) + 100).toString() + "px";
+  
+            document.getElementById('advertisement').style.height = (parseInt(currentHeight) + 100).toString() + "px";
+        }
+    </script>
+</html>

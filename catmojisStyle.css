@@ -1,0 +1,62 @@
+.adCat {
+    position: relative;
+    margin-bottom: auto;
+    z-index: 2;
+}
+
+.catBody {
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+#ears {
+    padding: 0;
+}
+
+#catEars {
+    float: left;
+    background-color: #F2E394;
+    padding: 0;
+}
+
+.catColor {
+    background-color: #F2AE72;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#advertisement ul {
+    margin-top: auto;
+    list-style: none;
+    background-color: beige;
+}
+
+#advertisement {
+    padding-top: 11px;
+    padding-left: 7px;
+    width: 190px;
+    height: 186px;
+    align-content: center;
+    background-color: beige;
+}
+
+#catFeet {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+span {
+    white-space: pre-wrap;
+}
+
+#quote {
+    margin-top: auto;
+    padding-top: 60px;
+    padding-left:12px;
+    padding-right:12px;
+    font-size: 16px;
+    text-align: center;
+}

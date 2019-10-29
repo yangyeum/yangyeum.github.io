@@ -1,0 +1,14 @@
+.title {
+    position: absolute;
+    z-index: 1;
+}
+
+header {
+    top: 4px;
+    position: fixed;
+    width: 100%;
+}
+
+#header {
+    text-align: center;
+}

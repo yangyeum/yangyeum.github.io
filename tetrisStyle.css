@@ -1,0 +1,80 @@
+.adCat {
+    position: relative;
+    margin-bottom: auto;
+    z-index: 2;
+}
+
+.catBody {
+    margin-top: 10%;
+    margin-left: 41%;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+#ears {
+    padding: 0;
+}
+
+#catEars {
+    float: left;
+    background-color: #F2E394;
+    padding: 0;
+}
+
+#tetris {
+    border: 5px solid white;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+#gameover {
+    font-size: 16px;
+    text-align: left;
+    padding-left: 10%;
+}
+
+#score {
+    margin-top: 10%;
+    margin-bottom: 12%;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.catColor {
+    background-color: #F2AE72;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#advertisement {
+    background-color: beige;
+    height: 197px;
+    width: 197px;
+}
+
+#catFeet {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+span {
+    white-space: pre-wrap;
+}
+
+#quote {
+    margin-top: auto;
+    padding-top: 60px;
+    padding-left:12px;
+    padding-right:12px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#FDR {
+    margin-top: auto;
+    padding-left:20px;
+    padding-right:20px;
+    font-size: 14px;
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+footer{
+    background-color: #F2E394;
+    bottom: 0;
+    padding-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#footer {
+    text-align: center;
+    z-index: 1;
+}
+
+.info {
+    font-size: 16px;
+    display: inline;
+    padding: 10px;
+    z-index: 1;
+}
