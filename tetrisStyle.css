@@ -5,8 +5,9 @@
 }
 
 .catBody {
-    margin-top: 10%;
-    margin-left: 41%;
+    margin-top: 8%;
+    margin-left: auto;
+    padding-left: 120px;
     margin-right: auto;
     margin-bottom: auto;
 }
