@@ -137,7 +137,7 @@ function playerDrop() {
   player.pos.y++;
   if (collide(arena, player)) {
     player.pos.y--;
-    if (gameover === 0){
+    if (gameover == 0){
       merge(arena, player);
       playerReset();
       arenaSweep();
@@ -214,7 +214,7 @@ let speedUp = 0;
 let lastTime = 0;
 function update(time = 0) {
   speedUp = player.score;
-  const deltaTime = time - lastTime + (speedUp / 16);
+  const deltaTime = time - lastTime + (speedUp / 4);
   lastTime =time;
   dropCounter += deltaTime;
   if (dropCounter > dropInterval){
@@ -258,7 +258,7 @@ function restart(){
   playerReset();
   updateScore();
   update();
-  document.getElementById('gameover').innerText = "Use the arrow keys to move and the Up Arrow to rotate";
+  document.getElementById('gameover').innerText = "Arrow keys = move \nUp Arrow = rotate";
 }
 
 function music() {
@@ -277,7 +277,9 @@ document.addEventListener('keydown', event => {
   }else if (event.keyCode === 38){
     playerRotate(1)
   }else if (event.keyCode === 82){
-    restart();
+    if (gameover == 1) {
+      restart();
+    }
   }else if (event.keyCode === 77){
     if (toggle === 0) {
       audio.pause();
