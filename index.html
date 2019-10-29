@@ -35,7 +35,7 @@
                 </div>
             </header>
         </div>
-        <div class="adCat">
+        <div id="adCat">
             <table id="catBody" cellspacing="0" cellpadding="0">
                 <tr>
                     <td>
@@ -75,6 +75,9 @@
         function feedCat() {
             var currentWidth = document.getElementById('advertisement').style.width;
             currentWidth = currentWidth.replace('px','');
+            
+            var currentTopMargin = document.getElementById('adCat').style.marginTop;
+            currentTopMargin = currentTopMargin.replace('%', '');
 
             var currentHeight = document.getElementById('advertisement').style.height;
             currentHeight = currentHeight.replace('px','');
@@ -82,6 +85,8 @@
             document.getElementById('advertisement').style.width = (parseInt(currentWidth) + 100).toString() + "px";
   
             document.getElementById('advertisement').style.height = (parseInt(currentHeight) + 100).toString() + "px";
+
+            document.getElementById('adCat').style.marginTop = (parseInt(currentTopMargin) - 1).toString() + "%";
         }
     </script>
 </html>
