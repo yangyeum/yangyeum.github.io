@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>The AdCat - Mario</title>
+
+        <meta charset="UTF-8">
+
+
+
+        <link rel="stylesheet" href="tetrisStyle.css">
+
+        <link rel="stylesheet" href="footer.css">
+
+
+
+        <style>
+
+            html, body {
+
+                width: 100%;
+
+                height: 100%;
+
+                overflow: hidden;
+
+                font-family: Arial, Helvetica, sans-serif;
+
+                font-size: 22px;
+
+                background-color: #F2E394;
+
+                margin: 0;
+
+                padding: 0;
+
+                border: 0;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <table class="catBody" cellspacing="0" cellpadding="0">
+
+            <tr>
+
+                <td id="ears">
+
+                    <span id="catEars">    ^    ^</span>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="catColor">
+
+                    ( ●ω●- )<br>
+
+                    <div>
+	<div id="emulator">
+		<p>To play this game, please, download the latest Flash player!</p>
+		<br>
+		<a href="http://www.adobe.com/go/getflashplayer">
+			<img src="//www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png" alt="Get Adobe Flash player"/>
+		</a>
+	</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+<script type="text/javascript">
+
+	var resizeOwnEmulator = function(width, height)
+	{
+		var emulator = $('#emulator');
+		emulator.css('width', width);
+		emulator.css('height', height);
+	}
+
+	$(function()
+	{
+		function embed()
+		{
+			var emulator = $('#emulator');
+			if(emulator)
+			{
+				var flashvars = 
+				{
+					system : 'nes',
+					url : '/roms/Flappy Bird (PD) v1.0.gen'
+				};
+				var params = {};
+				var attributes = {};
+				
+				params.allowscriptaccess = 'sameDomain';
+				params.allowFullScreen = 'true';
+				params.allowFullScreenInteractive = 'true';
+				
+				swfobject.embedSWF('flash/Nesbox.swf', 'emulator', '640', '480', '11.2.0', 'flash/expressInstall.swf', flashvars, params, attributes);
+			}
+		}
+		
+		embed();
+	});
+	
+</script>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td style ="background-color: #F2E394;">
+
+                    <span style="float: left;">U      U</span>
+
+                    <span style="float: right">U      U</span>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <footer>
+
+            <div id="footer">
+
+                <p class="info">created by: donny</p>
+
+                <a href="index.html"><p class="info">home</p></a>
+
+                <a href="about.html"><p class="info">about</p></a>
+
+                <a href="catmojis.html"><p class="info">catmojis</p></a>
+                
+                <a href="tetris.html"><p class="info">tetris</p></a>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+    <script src="tetris.js"></script>
+
+</html>
