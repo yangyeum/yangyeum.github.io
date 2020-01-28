@@ -78,8 +78,8 @@ function keyboard(callback, event){
 	}
 }
 
-function nes_init(canvas_id){
-	var canvas = document.getElementById(canvas_id);
+function nes_init('nes-canvas'){
+	var canvas = document.getElementById('nes-canvas');
 	canvas_ctx = canvas.getContext("2d");
 	image = canvas_ctx.getImageData(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	
