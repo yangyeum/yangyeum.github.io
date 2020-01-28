@@ -103,13 +103,13 @@ function nes_boot(rom_data){
 	window.requestAnimationFrame(onAnimationFrame);
 }
 
-function nes_load_data(canvas_id, rom_data){
-	nes_init(canvas_id);
+function nes_load_data('nes-canvas', rom_data){
+	nes_init('nes-canvas');
 	nes_boot(rom_data);
 }
 
-function nes_load_url(canvas_id, path){
-	nes_init(canvas_id);
+function nes_load_url('nes-canvas', path){
+	nes_init('nes-canvas');
 	
 	var req = new XMLHttpRequest();
 	req.open("GET", path);
