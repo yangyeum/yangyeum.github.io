@@ -19,6 +19,10 @@
                 padding: 0;
                 border: 0;
             }
+            
+            <script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+		    <script type="text/javascript" src="nes-embed.js"></script>
+            <script>window.onload = function(){nes_load_url("nes-canvas", "InterglacticTransmissing.nes");}</script>
         </style>
     </head>
     <body>
@@ -31,7 +35,9 @@
             <tr>
                 <td class="catColor">
                     ( ●ω●- )<br>
-                    <canvas id="canvas_id" width="240" height="400"></canvas>
+                    <div style="margin: auto; width: 75%;">
+			            <canvas id="nes-canvas" width="256" height="240" style="width: 100%"/>
+		            </div>
                 </td>
                 <td>
                     <p id="score"></p>
