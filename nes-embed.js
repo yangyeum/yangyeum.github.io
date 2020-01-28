@@ -78,8 +78,8 @@ function keyboard(callback, event){
 	}
 }
 
-function nes_init('nes-canvas'){
-	var canvas = document.getElementById('nes-canvas');
+function nes_init(canvas_id){
+	var canvas = document.getElementById(canvas_id);
 	canvas_ctx = canvas.getContext("2d");
 	image = canvas_ctx.getImageData(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	
@@ -103,13 +103,13 @@ function nes_boot(rom_data){
 	window.requestAnimationFrame(onAnimationFrame);
 }
 
-function nes_load_data('nes-canvas', rom_data){
-	nes_init('nes-canvas');
+function nes_load_data(canvas_id, rom_data){
+	nes_init(canvas_id);
 	nes_boot(rom_data);
 }
 
-function nes_load_url('nes-canvas', path){
-	nes_init('nes-canvas');
+function nes_load_url(canvas_id, path){
+	nes_init(canvas_id);
 	
 	var req = new XMLHttpRequest();
 	req.open("GET", path);
