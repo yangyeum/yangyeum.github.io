@@ -20,16 +20,40 @@
                 border: 0;
             }
             
-            <script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
-	    <script type="text/javascript" src="nes-embed.js"></script>
-            <script>window.onload = function(){nes_load_url("nes-canvas", "mario.nes");}</script>
+        	<script type="text/javascript" src="https://cdn.rawgit.com/takahirox/nes-js/v0.0.1/build/nes.min.js"></script>
+  		<script type="text/javascript" >
+    			function init() {
+      				var url = 'url to rom image';
+      				var request = new XMLHttpRequest();
+      				request.responseType = 'arraybuffer';
+
+      				request.onload = function() {
+        				var buffer = request.response;
+        				var nes = new NesJs.Nes();
+
+        				nes.setRom(new NesJs.Rom(buffer));
+        				nes.setDisplay(new NesJs.Display(document.getElementById('gameCanvas')));
+        				nes.setAudio(new NesJs.Audio());
+
+        				window.onkeydown = function(e) { nes.handleKeyDown(e); };
+        				window.onkeyup = function(e) { nes.handleKeyUp(e); };
+
+        				nes.bootup();
+        				nes.run();
+      				};
+
+      			request.open('GET', url, true);
+      			request.send(null);
+    		}
+  		</script>
         </style>
     </head>
-    <body>
-	<div style="margin: auto; width: 75%;">
-		<canvas id="nes-canvas" width="256" height="240" style="width: 100%"/>
-	</div>
-	<p>DPad: Arrow keys<br/>Start: Return, Select: Tab<br/>A Button: A, B Button: S</p>
+    <body onload="init()">
+	    
+	<p>
+    		<canvas id="gameCanvas" width="256" height="240"></canvas>
+ 	</p>
+	    
         <footer>
             <div id="footer">
                 <p class="info">created by: donny</p>
